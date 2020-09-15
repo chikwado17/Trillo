@@ -16,6 +16,15 @@
    justify-content: center;
 }
 
+@media only screen and (max-width:31.25em) {
+    .search {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
+}
+
+
 .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -148,6 +157,32 @@
     margin-top: 3.5rem;
 }
 
+@media only screen and (max-width:56.25em) {
+    .side-nav {
+        display: flex; 
+        margin: 0;
+    }
+
+    .side-nav__item { 
+        flex: 1;
+    }
+
+    .side-nav__item:not(:last-child) {
+        margin:0 !important;
+    }
+
+    .side-nav__link:link,
+    .side-nav__link:visited{
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .legal {
+        display: none;
+    }
+}
+ 
+
 .side-nav__item {
     position: relative;
 }
@@ -155,7 +190,6 @@
 .side-nav__item:not(:last-child) {
     margin-bottom: .5rem;
 }
-
 
 .side-nav__item::before{
     content: "";
@@ -209,12 +243,33 @@
     align-items: center;
 }
 
+
+@media only screen and (max-width:37.5em) {
+ 
+    .side-nav__link:link,
+    .side-nav__link:visited{
+        flex-direction: column;
+        padding: 1.5rem .5rem;
+    }
+
+}
+
 .side-nav__icon {
     height: 1.75rem;
     width: 1.75rem;
 
     margin-right: 2rem;
     fill:currentColor; 
+}
+
+@media only screen and (max-width:37.5em) {
+ 
+    .side-nav__icon {
+        margin-right:0;
+        margin-bottom: .7rem;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
 }
 
 .legal {
@@ -265,10 +320,26 @@
     padding: 1.5rem 3rem;
 }
 
+@media only screen and (max-width:37.5em) {
+    .overview__heading {
+        font-size: 1.4rem;
+        padding: 1.25rem 2rem;
+    }
+}
+
+
 .overview__stars {
     display: flex;
     margin-right: auto;
 }
+
+@media only screen and (max-width:37.5em) {
+    .overview__stars {
+        display: flex;
+        margin-left: -1rem;
+    }
+}
+
 
 .overview__icon-star,
 .overview__icon-location {
@@ -300,15 +371,36 @@
     flex-direction: column;
 }
 
+@media only screen and (max-width:37.5em) {
+    .overview__rating {
+        padding: 0 1.5rem;
+    }
+   
+}
+
 .overview__rating--average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
 }
 
+
+@media only screen and (max-width:37.5em) {
+    .overview__rating--average {
+        font-size: 1.8rem;
+    }
+   
+}
 .overview__rating--count {
     font-size: 1rem;
     text-transform: uppercase;
+}
+
+@media only screen and (max-width:37.5em) {
+    .overview__rating--count {
+        font-size: .5rem;
+    }
+   
 }
 
 /////////////////////////////
@@ -407,6 +499,16 @@
     margin-bottom: .7rem;
 }
 
+@media only screen and (max-width:31.25em) {
+    .list__item {
+        flex: 0 0 100%;
+        margin-bottom: .7rem;
+        
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
 .list__item::before {
     content: "";
     display: inline-block;
@@ -417,12 +519,19 @@
     // background-image: url("../img/chevron-thin-right.svg");
     // background-size: cover;
 
-     background-color: var(--color-primary);
-     -webkit-mask-image: url("../img/chevron-thin-right.svg");
-     -webkit-mask-size: cover;
+    background-color: var(--color-primary);
+    -webkit-mask-image: url("../img/chevron-thin-right.svg");
+    -webkit-mask-size: cover;
 
-     mask-image: url("../img/chevron-thin-right.svg");
-     mask-size: cover;
+    mask-image: url("../img/chevron-thin-right.svg");
+    mask-size: cover;
+}
+
+@media only screen and (max-width:31.25em) {
+    .list__item::before {
+        display: flex;
+        align-self: center;
+    }
 }
 
 .recommend {
@@ -435,6 +544,10 @@
 
 .recommend__count {
     margin-right: auto;
+}
+
+.recommend__friends {
+    display: flex;
 }
 
 .recommend__photo {
@@ -450,7 +563,7 @@
 }
 
 .recommend__photo:not(:last-child) {
-    margin-right: -1.5rem;
+    margin-right: -2rem;
 }
 
 /////////////////////////////
@@ -464,6 +577,13 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+}
+
+@media only screen and (max-width:56.25em) {
+  .review {
+      padding:2rem;
+      margin-bottom: 3rem;
+  }
 }
 
 .review::before {
@@ -537,6 +657,13 @@
     text-align: center;
 }
 
+
+@media only screen and (max-width:56.25em) {
+    .cta {
+        padding:2.5rem 0;
+    }
+}
+
 .cta__book-now {
     font-size: 2rem;
     font-weight: 300;
@@ -544,6 +671,11 @@
     margin-bottom: 2.5rem;
 }
 
+@media only screen and (max-width:31.25em) {
+    .cta__book-now {
+        font-size: 1.5rem; 
+    }
+}
 /////////////////////////////
 //  CALL TO ACTION BUTTON
 
@@ -565,9 +697,6 @@
     position: relative;
     overflow: hidden;
 }
-
-
-
 
 .btn__visible {
     display: inline-block;
@@ -617,3 +746,5 @@
     outline: none;
     animation: pulsate 1s infinite;
 }
+
+

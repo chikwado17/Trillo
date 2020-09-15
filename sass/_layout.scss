@@ -5,6 +5,21 @@
     box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
 
     min-height: 50rem;
+
+   
+}
+@media only screen and (max-width:75em) {
+    .container {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }   
+}
+
+@media only screen and (max-width:68.75em) {
+    html {
+        font-size: 50%;
+    }  
 }
 
 .header {
@@ -18,8 +33,22 @@
     align-items: center;
 }
 
+@media only screen and (max-width:31.25em) {
+    .header {
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around;
+    }
+}
+
 .content {
     display: flex;
+}
+
+@media only screen and (max-width:56.25em) {
+   .content {
+       flex-direction: column;
+   }
 }
 
 .sidebar {
@@ -55,4 +84,25 @@
 
 .user-reviews {
     flex: 1;
+}
+
+@media only screen and (max-width:56.25em) {
+    .detail {
+        padding: 3rem;
+    }
+    .description { 
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+}
+
+@media only screen and (max-width:37.5em) {
+    .detail {
+        flex-direction: column;
+    }
+
+    .description { 
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }
